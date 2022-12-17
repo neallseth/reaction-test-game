@@ -2,7 +2,7 @@ let startTime = 0;
 let activeGame = false;
 let score = 0;
 let record = null;
-
+//test
 const actionButtonElement = document.querySelector(".action-btn");
 actionButtonElement.addEventListener("mousedown", (e) => {
   if (!activeGame) {
