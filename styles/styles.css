@@ -6,10 +6,15 @@ body {
   margin: 0;
 }
 
+.title {
+  margin: 10vh 0;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* margin-top: 10vh; */
 }
 
 .main-section {
@@ -19,10 +24,8 @@ body {
 }
 
 .action-btn {
-  width: 50vw;
-  height: 25vw;
-  width: 50vw;
-  height: 25vw;
+  width: 75vw;
+  height: 50vw;
   border: none;
   background-color: #80808021;
   border-radius: 1rem;
@@ -40,5 +43,5 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0rem;
+  margin: 2.5rem 0rem;
 }

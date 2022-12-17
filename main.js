@@ -4,7 +4,7 @@ let score = 0;
 let record = null;
 
 const actionButtonElement = document.querySelector(".action-btn");
-actionButtonElement.addEventListener("click", (e) => {
+actionButtonElement.addEventListener("mousedown", (e) => {
   if (!activeGame) {
     handleGameStart();
   } else if (startTime) {
@@ -16,9 +16,8 @@ document.addEventListener("keydown", (e) => {
   e.preventDefault();
   if (e.code === "Space") {
     if (!activeGame) {
-      console.log("space clicked, starting game!");
       handleGameStart();
-    } else if (startTime) {
+    } else if (startTime && !e.repeat) {
       handleGameEnd();
     }
   }
@@ -50,7 +49,7 @@ function handleGameEnd() {
     record = score;
     handleNewRecord();
   }
-  setButtonState("#80808021", "Start Game");
+  setButtonState("#80808021", "Restart Game");
 }
 
 function updateUIWithScore(score) {
