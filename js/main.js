@@ -23,6 +23,14 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+actionButtonElement.addEventListener("touchstart", () => {
+  if (!activeGame) {
+    handleGameStart();
+  } else if (startTime) {
+    handleGameEnd();
+  }
+});
+
 function setButtonState(color, text) {
   actionButtonElement.style.backgroundColor = color;
   actionButtonElement.innerText = text;
