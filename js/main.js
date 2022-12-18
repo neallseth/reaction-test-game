@@ -2,7 +2,6 @@ let startTime = 0;
 let activeGame = false;
 let score = 0;
 let record = null;
-
 const actionButtonElement = document.querySelector(".action-btn");
 actionButtonElement.addEventListener("mousedown", (e) => {
   if (!activeGame) {
@@ -20,6 +19,14 @@ document.addEventListener("keydown", (e) => {
     } else if (startTime && !e.repeat) {
       handleGameEnd();
     }
+  }
+});
+
+actionButtonElement.addEventListener("touchstart", () => {
+  if (!activeGame) {
+    handleGameStart();
+  } else if (startTime) {
+    handleGameEnd();
   }
 });
 
